@@ -29,7 +29,7 @@ int main() {
     ifstream enf("/Users/s20181106278/Desktop/enf.txt");
     if(onf.is_open())
     {
-        for(i=0;i<5;++i)
+        for(i=0;i<5;++i)//向文件中输入学生信息
         {
             onf>>a[i].number>>a[i].name>>a[i].sex>>a[i].age;
         }
@@ -41,7 +41,7 @@ int main() {
         {
             enf>>k[j].people;
         }
-        for(j=0;j<5;++j)
+        for(j=0;j<5;++j)//输入裁判打的分数n
         {
             for(i=0;i<7;++i)
             {
@@ -50,16 +50,16 @@ int main() {
         }
         enf.close();
     }
-    for(i=0;i<5;i++)
+    for(i=0;i<5;i++)//将裁判分数换成学生成绩
     {
         for(j=0;j<7;j++)
         {
             t[i].score[j]=k[i].score[j];
         }
     }
-    for(i=0;i<5;i++)
+    for(i=0;i<5;i++)//冒泡排序
         sort(t[i].score,t[i].score+7);
-    for(j=0;j<5;++j)
+    for(j=0;j<5;++j)//求平均分
     {
         for(i=1;i<6;++i)
         {
@@ -67,11 +67,11 @@ int main() {
         }
         t[j].ave/=5;
     }
-    for(i=0;i<5;i++)
+    for(i=0;i<5;i++)//将平均分转到数组里
     {
         a[i].ave=t[i].ave;
     }
-    sort(a,a+5,cmp);
+    sort(a,a+5,cmp);//将平均分从大到小排序
     
     if(inf.is_open())
     {
