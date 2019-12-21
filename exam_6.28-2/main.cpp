@@ -77,9 +77,4 @@ int main() {
     {
         for(int i=0;i<5;i++)
         {
-            inf<<a[i].number<<" "<<a[i].name<<" "<<a[i].sex<<" "<<a[i].age<<" "<<a[i].ave<<" "<<endl;
-        }
-        inf.close();
-    }
-    return 0;
-}
+            inf<<a[i].number<<" 
